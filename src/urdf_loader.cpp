@@ -473,7 +473,7 @@ void URDFLoader::ParseSRDF(urdf::Model const &urdf, srdf::Model const &srdf,
 
     // Link adjacencies.
     size_t num_adjacent = 0;
-    BOOST_FOREACH (srdf::Model::DisabledCollision const &link_pair,
+    BOOST_FOREACH (srdf::Model::CollisionPair const &link_pair,
                    srdf.getDisabledCollisionPairs()) {
         std::string const &link1_name = link_pair.link1_;
         OpenRAVE::KinBody::LinkInfoPtr link1_info = link_map[link1_name];
